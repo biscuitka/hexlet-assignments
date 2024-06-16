@@ -1,0 +1,24 @@
+---
+
+spring:
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+  output:
+    ansi:
+      enabled: always
+
+---
+logging:
+  level:
+    root: WARN
+    org:
+      springframework:
+        # web: DEBUG
+        security: DEBUG
+# BEGIN
+rsa:
+  private-key: classpath:certs/private.pem
+  public-key: classpath:certs/public.pem
+# END
